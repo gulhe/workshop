@@ -1,11 +1,19 @@
 export const rpn = {
   additions(additions) {
     let total = 0;
-    let member_one = 0;
-    let member_two = 0;
+    let arr = additions.split(" ")
 
-    if (additions[0] == "1" && additions[2] == "1" && additions[4] == "+") {
-      return 2;
+    for (const element of arr) {
+        if (arr[element] === '+') {
+            let total_tmp = 0;
+            total_tmp += Number.parseInt(arr[element - 1])
+            total_tmp += Number.parseInt(arr[element - 2])
+            arr.splice(element - 2,3,total_tmp)
+            console.log(arr)
+        }
+        if (arr.length <= 1) {
+            return total;
+        }
     }
     return 1;
   },
