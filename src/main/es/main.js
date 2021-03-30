@@ -1,6 +1,10 @@
 export const rpn = {
     additions(additions) {
-        return /* TODO: part 1 */undefined;
+        let res;
+        let arr;
+
+        arr = additions.split(' ');
+        return 1;
     },
     subtractions(subtractions) {
         return /* TODO: part 2 */undefined;
